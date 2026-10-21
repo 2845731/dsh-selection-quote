@@ -1,0 +1,65 @@
+{
+  "name": "dsh-selection-quote",
+  "version": "0.1.0",
+  "description": "Drag-and-drop quote chips for DeepSeek Harness: select text in a PDF preview or the chat transcript, insert it as an inline composer chip, then send it as an expandable quote bubble.",
+  "type": "module",
+  "license": "MIT",
+  "author": "2845731",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2845731/dsh-selection-quote.git"
+  },
+  "homepage": "https://github.com/2845731/dsh-selection-quote#readme",
+  "bugs": {
+    "url": "https://github.com/2845731/dsh-selection-quote/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "quote",
+    "selection",
+    "pdf",
+    "drag-and-drop",
+    "in-context-learning"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0",
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node tests/harness-check.mjs && node tests/merge-test.mjs && node tests/quote-test.mjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

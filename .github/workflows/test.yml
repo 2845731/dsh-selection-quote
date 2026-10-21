@@ -1,0 +1,21 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Bundle structure
+        run: node tests/harness-check.mjs
+      - name: PDF line merging
+        run: node tests/merge-test.mjs
+      - name: Quote chip serialization
+        run: node tests/quote-test.mjs

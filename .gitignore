@@ -1,0 +1,10 @@
+# build / runtime artifacts
+node_modules/
+host-load.log
+*.local
+
+# editor / OS noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
