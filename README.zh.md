@@ -1,7 +1,9 @@
 # dsh-selection-quote（划词引用）
 
+[English](README.md) | **中文**
+
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![DSH plugin](https://img.shields.io/badge/dsh-plugin-0.2.x-2f6fdb.svg)](https://github.com/2845731/dsh-selection-quote)
+[![test](https://github.com/2845731/dsh-selection-quote/actions/workflows/test.yml/badge.svg)](https://github.com/2845731/dsh-selection-quote/actions/workflows/test.yml)
 
 **划词 → 变成可拖动引用气泡 → 和模型讨论。**
 
@@ -12,10 +14,20 @@
 
 > 非官方社区插件。依赖 DSH 0.2.x 的公开组合器/引用管线，详见[兼容性](#兼容性)。
 
+## 效果预览
+
+| 引用历史问答内容 | 引用 PDF 预览内容 |
+| --- | --- |
+| ![在历史消息中选中文字，出现「引用」按钮](https://raw.githubusercontent.com/2845731/dsh-selection-quote/main/docs/images/quote-from-chat.png) | ![在 PDF 预览中选中文字，出现「引用」按钮](https://raw.githubusercontent.com/2845731/dsh-selection-quote/main/docs/images/quote-from-pdf.png) |
+
+在两处选中文字都会在选区旁浮出「引用」按钮（旁边是切换引用方式的滑块按钮）。点击后，内容会以
+内联 chip 的形式插入输入框光标处；可以插多个、和输入文字穿插、拖动换位；发送后聊天记录里每条引用
+显示为可点开的气泡。
+
 ## 功能
 
-- **随处可引用**：右侧 PDF 预览（`[data-pdf-text]`）或对话记录（`[data-chat-flow]`）中选中文字后，
-  选区旁出现「引用」浮动按钮。
+- **随处可引用**：右侧 PDF 预览（`[data-pdf-text]`）或对话记录（`[data-chat-flow]`，包含历史问答）中
+  选中文字后，选区旁出现「引用」浮动按钮。
 - **输入框内联 chip**：引用插入在光标处，是原子节点；可与文字混排、可插多个、退格一次删掉整个 chip。
 - **拖动排序**：按住 chip 拖动，跟随鼠标显示幽灵气泡，输入框内出现蓝色落点指示线；松开即移动，Esc 取消。
   拖动由两次普通草稿编辑组成，第二步失败会自动回滚，不会出现重复 chip 或删错文字。
@@ -46,10 +58,10 @@ dsh plugin --profile desktop add dsh-selection-quote
 
 ## 使用
 
-1. 在 PDF 预览或历史消息里拖选文字 → 点「引用」；
-2. 光标处出现引用 chip（或完整引用模式下是明文引用块）；
-3. 在 chip 前后自由输入文字，可插入多个、可拖动换位；
-4. 发送后：聊天记录中每条引用是可可展开的气泡，模型收到完整引文。
+1. 在**历史消息**里拖选文字（效果预览图一），或在**右侧 PDF 预览**里拖选文字（效果预览图二）；
+2. 点「引用」→ 光标处出现引用 chip（完整引用模式下则是明文引用块）；
+3. 在 chip 前后自由输入文字，可插入多个、可直接拖动 chip 换位；
+4. 发送后：聊天记录中每条引用是可展开的气泡，模型收到完整引文。
 
 ### 设置
 

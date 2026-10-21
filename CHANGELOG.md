@@ -4,6 +4,13 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Docs
+
+- Bilingual README (English / 中文) with language switch.
+- Added screenshots for quoting from an earlier conversation message and from the PDF preview.
+- Documented dragging quote chips, settings, compatibility and privacy notes.
 ## [0.1.0] - 2026-10-21
 
 ### Added

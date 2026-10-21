@@ -1,7 +1,9 @@
 # dsh-selection-quote
 
+**English** | [中文](README.zh.md)
+
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![DSH plugin](https://img.shields.io/badge/dsh-plugin-0.2.x-2f6fdb.svg)](https://github.com/2845731/dsh-selection-quote)
+[![test](https://github.com/2845731/dsh-selection-quote/actions/workflows/test.yml/badge.svg)](https://github.com/2845731/dsh-selection-quote/actions/workflows/test.yml)
 
 **Select text, quote it as a draggable chip, discuss it with the agent.**
 
@@ -14,11 +16,22 @@ and each one expands to the full quote when the message is sent.
 > Unofficial community plugin. The plugin uses the public composer/reference seams of DSH
 > 0.2.x; see [Compatibility](#compatibility) for the exact expectations.
 
+## Screenshots
+
+| Quote from an earlier conversation message | Quote from the PDF preview |
+| --- | --- |
+| ![Selecting text in a message shows the Quote pill](https://raw.githubusercontent.com/2845731/dsh-selection-quote/main/docs/images/quote-from-chat.png) | ![Selecting text in the PDF preview shows the Quote pill](https://raw.githubusercontent.com/2845731/dsh-selection-quote/main/docs/images/quote-from-pdf.png) |
+
+Selecting text in either place shows the floating **Quote** button (and the style gear beside
+it). The passage then becomes an inline chip at the caret; several chips can be mixed with typed
+text, each one can be dragged to another position, and sent messages render every quote as an
+expandable bubble.
+
 ## Features
 
 - **Quote from anywhere**: text selected in the right-sidebar PDF preview
-  (`[data-pdf-text]`) or in the conversation transcript (`[data-chat-flow]`) gets a floating
-  **Quote** pill near the selection.
+  (`[data-pdf-text]`) or in the conversation transcript (`[data-chat-flow]`, including earlier
+  questions and answers) gets a floating **Quote** pill near the selection.
 - **Inline chips**: the quote is inserted at the caret as an atomic chip (like an `@file`
   reference). Mix text and chips freely, insert several quotes, delete a chip with one
   Backspace.
@@ -58,7 +71,8 @@ the Web client picks it up live (no restart needed).
 
 ## Usage
 
-1. Drag-select text in a PDF preview or in an earlier message → click **Quote**.
+1. Drag-select text in an earlier message (screenshot 1) or in the PDF preview (screenshot 2)
+   → click **Quote**.
 2. The passage becomes a chip at the caret (or plain text in *Full quote* style).
 3. Add, reorder and drag chips freely; type your question around them.
 4. Send. In the transcript each quote becomes an expandable chip; the agent receives the full
