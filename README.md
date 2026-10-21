@@ -28,7 +28,11 @@ Drag-select the text, click **Quote**, and the passage lands in the composer as 
 
 ## Install
 
-In the Web GUI: **Plugins → Add plugin → Install a third-party plugin**, enter `dsh-selection-quote`, then **Enable now**. From a terminal:
+In the Web GUI: **Plugins → Add plugin → Install a third-party plugin**, type `dsh-selection-quote`, install it, then click **Enable now**.
+
+![Installing the plugin from the Plugins page](https://raw.githubusercontent.com/2845731/dsh-selection-quote/main/docs/images/install-plugin.png)
+
+Or from a terminal:
 
 ```powershell
 dsh plugin --profile desktop add dsh-selection-quote

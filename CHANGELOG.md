@@ -9,8 +9,8 @@ All notable changes to this project are documented here. The format follows
 ### Docs
 
 - Bilingual README (English / 中文) with language switch, rewritten short and to the point.
-- Screenshots: quoting from an earlier message, quoting from the PDF preview, and the composer
-  with quote chips mixed into typed text.
+- Screenshots: quoting from an earlier message, quoting from the PDF preview, the composer
+  with quote chips mixed into typed text, and the Plugins page install dialog.
 - Documented dragging quote chips, settings, compatibility and privacy notes.
 ## [0.1.0] - 2026-10-21
 

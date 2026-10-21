@@ -27,7 +27,11 @@
 
 ## 安装
 
-Web 界面：**插件 → 添加插件 → 安装第三方插件**，输入包名 `dsh-selection-quote`，完成后点 **立即启用**。命令行：
+Web 界面：**插件 → 添加插件 → 安装第三方插件**，输入包名 `dsh-selection-quote`，安装完成后点 **立即启用**。
+
+![在插件页安装 dsh-selection-quote](https://raw.githubusercontent.com/2845731/dsh-selection-quote/main/docs/images/install-plugin.png)
+
+或者命令行：
 
 ```powershell
 dsh plugin --profile desktop add dsh-selection-quote
